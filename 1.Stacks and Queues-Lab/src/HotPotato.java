@@ -19,6 +19,5 @@ public class HotPotato {
             }
         }
         System.out.println("Last is "+queue.poll());
-        System.out.println("New line");
     }
 }
