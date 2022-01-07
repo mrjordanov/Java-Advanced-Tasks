@@ -17,15 +17,16 @@ public class InterceptionMatrix {
                 outputMatrix[row][col]=fillChar;
             }
         }
+        printMatrix (outputMatrix);
 
-        for (int row = 0; row <rows ; row++) {
-            for (int col = 0; col <cols ; col++) {
+    }
+    private static void printMatrix(char[][] outputMatrix) {
+        for (int row = 0; row <outputMatrix.length ; row++) {
+            for (int col = 0; col <outputMatrix[row].length ; col++) {
                 System.out.print(outputMatrix[row][col] + " ");
             }
             System.out.println();
         }
-
-
     }
 
     public static char[][] readMatrix(int rows, int cols, Scanner scanner) {
@@ -39,8 +40,21 @@ public class InterceptionMatrix {
                 char cur = elements[i].charAt(0);
                 arr[i] = cur;
             }
-            matrix[row] = arr;
+            // char[] arrOne=line.replaceAll("\\s+","").toCharArray();
+            matrix[row] = arr;//arrOne
         }
         return matrix;
     }
+        // метод със splitpattern за разл разделители за 4-та задача SUM MATRIX ELEMENTS
+    public static int[][] readMatrix(int rows, int cols, Scanner scanner, String splitPattern) {
+        int[][] matrix = new int[rows][];
+        for (int row = 0; row < rows; row++) {
+                matrix[row]= Arrays.stream(scanner.nextLine().split(splitPattern)).mapToInt(Integer::parseInt)
+                        .toArray();
+        }
+        return matrix;
+    }
+
+
+
 }
