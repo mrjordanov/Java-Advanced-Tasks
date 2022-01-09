@@ -13,7 +13,7 @@ public class CompareMatrix {
         boolean areEqual= areEqual(firstMatrix,secondMatrix);
 
         //тернарен оператор трябва да е нещо, което връща true/false
-        // : ако areEqual wyrne true отпечатай equal, в противен случай not equal;
+        // : ако areEqual върне true отпечатай equal, в противен случай not equal;
         String output=areEqual ? "equal": "not equal";
 
         System.out.println(output);
