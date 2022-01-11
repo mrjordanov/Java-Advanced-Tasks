@@ -14,27 +14,29 @@ public class MathPotato {
         int cycle=1;
         while (queue.size()>1){
             for (int i = 1; i <n ; i++) {
-                queue.offer(queue.poll());
-                if (isPrime(cycle,n)){
-                    System.out.println("Removed "+queue.poll());
+                queue.addLast(queue.poll());
+                if (isPrime(cycle)){
+                    String removed= queue.poll();
+                    System.out.println("Removed "+removed);
                 }
                 else {
                     System.out.println("Prime "+queue.peek());
                 }
+            }
                 cycle++;
             }
-        }
         System.out.println("Last is "+queue.poll());
-
     }
 
-    private static boolean isPrime(int cycle,int n) {
-        boolean isPrimeCycle=false;
-        if (cycle%n==0) {
-            isPrimeCycle=true;
-        }
-
-        return !isPrimeCycle;
+    private static boolean isPrime(int cycle) {
+        boolean isPrimeCycle=true;
+            for (int j =2; j <=cycle-1; j++) {
+                if (cycle%j==0){
+                    isPrimeCycle=false;
+                    break;
+                }
+            }
+        return isPrimeCycle;
     }
 
 }
