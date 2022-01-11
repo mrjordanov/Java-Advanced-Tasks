@@ -14,16 +14,15 @@ public class MathPotato {
         int cycle=1;
         while (queue.size()>1){
             for (int i = 1; i <n ; i++) {
-                queue.addLast(queue.poll());
-                if (isPrime(cycle)){
-                    String removed= queue.poll();
-                    System.out.println("Removed "+removed);
-                }
-                else {
-                    System.out.println("Prime "+queue.peek());
-                }
+                queue.offer(queue.poll());
             }
-                cycle++;
+            if (isPrime(cycle)){
+                System.out.println("Prime "+queue.peek());
+            }
+            else {
+                System.out.println("Removed "+queue.poll());
+            }
+            cycle++;
             }
         System.out.println("Last is "+queue.poll());
     }
