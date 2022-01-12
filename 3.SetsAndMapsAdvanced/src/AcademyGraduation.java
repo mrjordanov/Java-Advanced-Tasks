@@ -25,7 +25,7 @@ public class AcademyGraduation {
 
         for (var entry : graduationList.entrySet()) {
             LinkedList<Double> grades= entry.getValue();
-            double avv= grades.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
+            BigDecimal avv=BigDecimal.valueOf(grades.stream().mapToDouble(Double::doubleValue).average().getAsDouble());
             String pattern="#.###############";
             DecimalFormat decimalFormat= new DecimalFormat(pattern);
             String format= decimalFormat.format(avv);
