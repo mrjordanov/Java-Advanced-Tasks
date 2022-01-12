@@ -13,23 +13,22 @@ public class AcademyGraduation {
         Map<String, LinkedList<Double>> graduationList = new TreeMap<>();
         for (int i = 0; i < n; i++) {
             String name = scanner.nextLine();
-            String[] info = scanner.nextLine().split(" ");
+            String[] allGrades = scanner.nextLine().split(" ");
 
-            LinkedList<Double> first = new LinkedList<>();
-            for (int j = 0; j < info.length; j++) {
-                first.add(Double.parseDouble(info[j]));
+            LinkedList<Double> grades = new LinkedList<>();
+            for (int j = 0; j < allGrades.length; j++) {
+                grades.add(Double.parseDouble(allGrades[j]));
             }
 
-            graduationList.putIfAbsent(name, first);
-
+            graduationList.putIfAbsent(name, grades);
         }
 
         for (var entry : graduationList.entrySet()) {
-                    LinkedList<Double> grades= entry.getValue();
-                    double avv= grades.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
-                    String pattern="#.###############";
-                    DecimalFormat decimalFormat= new DecimalFormat(pattern);
-                    String format= decimalFormat.format(avv);
+            LinkedList<Double> grades= entry.getValue();
+            double avv= grades.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
+            String pattern="#.###############";
+            DecimalFormat decimalFormat= new DecimalFormat(pattern);
+            String format= decimalFormat.format(avv);
             System.out.printf("%s is graduated with %s",entry.getKey(),format).println();
         }
     }
