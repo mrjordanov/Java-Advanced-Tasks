@@ -8,6 +8,7 @@ public class WriteEvery3thLine {
         InputStreamReader inputStreamReader= new InputStreamReader(inputStream);
         BufferedReader reader= new BufferedReader(inputStreamReader);
 
+
         BufferedWriter writer= new BufferedWriter(new PrintWriter("Print #th Line.txt"));
 
         String line=reader.readLine();
