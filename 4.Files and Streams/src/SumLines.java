@@ -8,16 +8,16 @@ import java.util.Scanner;
 public class SumLines {
     public static void main(String[] args) throws IOException {
 
-        String path="C:\\Users\\1Marin1\\Downloads\\SoftUni\\Advanced\\4.Streams, Files and Directories\\LAB\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\input.txt";
+        String path = "C:\\Users\\1Marin1\\Downloads\\SoftUni\\Advanced\\4.Streams, Files and Directories\\LAB\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\input.txt";
 
-        Path inPath= Path.of(path);
-        List<String> allLines= Files.readAllLines(inPath);
+        Path inPath = Path.of(path);
+        List<String> allLines = Files.readAllLines(inPath);
 
         allLines.stream().map(String::toCharArray).forEach(
-                charArray-> {
-                    int sum=0;
-                    for (char symbol:charArray) {
-                        sum+=symbol;
+                charArray -> {
+                    int sum = 0;
+                    for (char symbol : charArray) {
+                        sum += symbol;
                     }
                     System.out.println(sum);
                 }

@@ -11,24 +11,24 @@ import java.util.Map;
 public class ListFiles {
     public static void main(String[] args) throws IOException {
 
-        File root= new File("C:\\Users\\1Marin1\\Downloads\\SoftUni\\Advanced\\" +
+        File root = new File("C:\\Users\\1Marin1\\Downloads\\SoftUni\\Advanced\\" +
                 "4.Streams, Files and Directories\\04. Java-Advanced-Files-and-Streams-Lab-Resources\\Files-and-Streams");
 
-        Path outPath= Paths.get("C:\\Users\\1Marin1\\Desktop\\Java-Advanced-Tasks\\4.Files and Streams\\Lits-Files.txt");
+        Path outPath = Paths.get("C:\\Users\\1Marin1\\Desktop\\Java-Advanced-Tasks\\4.Files and Streams\\Lits-Files.txt");
 
         File[] files = root.listFiles();
-        List<String>info= new LinkedList<>();
-        for (File f:files) {
-            if(f.isFile()){
-                String name=f.getName();
-                long size=f.length();
-                String sizeOfFile=""+size+"";
-                String format= name+": ["+sizeOfFile+"]";
+        List<String> info = new LinkedList<>();
+        for (File f : files) {
+            if (f.isFile()) {
+                String name = f.getName();
+                long size = f.length();
+                String sizeOfFile = "" + size + "";
+                String format = name + ": [" + sizeOfFile + "]";
                 info.add(format);
             }
         }
 
-        Files.write(outPath,info);
+        Files.write(outPath, info);
 
     }
 }

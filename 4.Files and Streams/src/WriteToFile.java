@@ -8,22 +8,22 @@ import java.util.Set;
 public class WriteToFile {
     public static void main(String[] args) throws IOException {
 
-        String path="input.txt";
+        String path = "input.txt";
 
-        FileInputStream inputStream= new FileInputStream(path);
+        FileInputStream inputStream = new FileInputStream(path);
         FileOutputStream outputStream = new FileOutputStream("out.txt");
 
-        int value= inputStream.read();
+        int value = inputStream.read();
 
-        Set<Character> punctuations= Set.of( ',', '.', '!', '?');
+        Set<Character> punctuations = Set.of(',', '.', '!', '?');
 
-        while (value!=-1){
-            char cur= (char) value;
-          if (!punctuations.contains(cur)){
-              outputStream.write(cur);
-            //  System.out.print(cur);
-          }
-            value= inputStream.read();
+        while (value != -1) {
+            char cur = (char) value;
+            if (!punctuations.contains(cur)) {
+                outputStream.write(cur);
+                //  System.out.print(cur);
+            }
+            value = inputStream.read();
         }
 
         inputStream.close();

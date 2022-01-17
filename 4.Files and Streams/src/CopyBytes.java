@@ -11,18 +11,17 @@ public class CopyBytes {
         String path = "input.txt";
         FileInputStream inputStream = new FileInputStream(path);
         FileOutputStream outputStream = new FileOutputStream("CopyByBytes.txt");
-        PrintStream out= new PrintStream(outputStream);
+        PrintStream out = new PrintStream(outputStream);
 
-        int value= inputStream.read();
-        while(value!=-1){
-            if (value!=10 && value!=32){
-               out.print(value);
+        int value = inputStream.read();
+        while (value != -1) {
+            if (value != 10 && value != 32) {
+                out.print(value);
 
-            }
-            else {
+            } else {
                 out.print((char) value);
             }
-            value= inputStream.read();
+            value = inputStream.read();
         }
 
         inputStream.close();
