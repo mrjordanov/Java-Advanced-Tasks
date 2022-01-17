@@ -11,7 +11,7 @@ public class WordCount {
         "4.Streams, Files and Directories\\LAB\\" +
                 "04. Java-Advanced-Files-and-Streams-Exercises-Resources\\words.txt";
 
-        BufferedReader reader= new BufferedReader(new FileReader(path));
+
         BufferedWriter writer= new BufferedWriter(new PrintWriter("Result.txt"));
         Path inPath= Paths.get(path);
         List<String > word=Files.readAllLines(inPath);
@@ -34,23 +34,17 @@ public class WordCount {
                     wordsOfText.addAll(Arrays.asList(arrWithWords));
         }
 
-
         Map<String,Integer> occ= new LinkedHashMap<>();
 
-        for (int i = 0; i < wordsToFind.size() ; i++) {
-            String putInMap=wordsToFind.get(i);
-
+        for (String putInMap : wordsToFind) {
             for (String s : wordsOfText) {
-                String current = s;
-                if (current.equals(putInMap)){
+                if (s.equals(putInMap)) {
                     occ.putIfAbsent(putInMap, 0);
                     int totalCount = occ.get(putInMap) + 1;
                     occ.put(putInMap, totalCount);
                 }
             }
         }
-
-
 
        occ.entrySet().stream().sorted((s1,s2)-> s2.getValue().compareTo(s1.getValue()))
                .forEach(e-> {
