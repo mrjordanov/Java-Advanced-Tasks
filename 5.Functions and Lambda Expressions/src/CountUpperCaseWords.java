@@ -10,9 +10,9 @@ public class CountUpperCaseWords {
 
         String[] strings = scanner.nextLine().split("\\s+");
 
-        Predicate<String> predicate= str-> Character.isUpperCase(str.charAt(0));
+        Predicate<String> predicate = str -> Character.isUpperCase(str.charAt(0));
         List<String> upperCaseStrings = Arrays.stream(strings).filter(predicate).collect(Collectors.toList());
         System.out.println(upperCaseStrings.size());
-        System.out.println(String.join("\n",upperCaseStrings));
+        System.out.println(String.join("\n", upperCaseStrings));
     }
 }

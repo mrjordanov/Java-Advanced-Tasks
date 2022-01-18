@@ -18,14 +18,14 @@ public class SumNumbers {
         System.out.println("Sum = "+sum);
              */
 
-        String input= scanner.nextLine();
-        Function<String,Integer> countNumbers= str-> str.split(", ").length;
+        String input = scanner.nextLine();
+        Function<String, Integer> countNumbers = str -> str.split(", ").length;
 
-        Function<String,Integer> sumOfNumbers= str->Arrays.stream(str.split(", "))
+        Function<String, Integer> sumOfNumbers = str -> Arrays.stream(str.split(", "))
                 .mapToInt(Integer::parseInt).sum();
 
 
-        System.out.println("Count = "+countNumbers.apply(input));
-        System.out.println("Sum = "+sumOfNumbers.apply(input));
+        System.out.println("Count = " + countNumbers.apply(input));
+        System.out.println("Sum = " + sumOfNumbers.apply(input));
     }
 }

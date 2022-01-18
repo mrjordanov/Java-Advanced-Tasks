@@ -19,10 +19,10 @@ public class SortEvenNumbers {
         List<Integer> evenNumbers = numbers.stream()
                 .filter(e -> e % 2 == 0).collect(Collectors.toList());
 
-       // Function<Stream<Integer>,String> mutator= x->x.map(String::valueOf).collect(Collectors.joining(", "));
+        // Function<Stream<Integer>,String> mutator= x->x.map(String::valueOf).collect(Collectors.joining(", "));
         String firstOutput = evenNumbers.stream()
                 .map(String::valueOf).collect(Collectors.joining(", "));
-       // String firstOutput=mutator.apply(evenNumbers.stream());
+        // String firstOutput=mutator.apply(evenNumbers.stream());
         System.out.println(firstOutput);
 
         String sorted = evenNumbers.stream().sorted()

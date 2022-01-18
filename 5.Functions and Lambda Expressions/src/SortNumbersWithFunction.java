@@ -20,7 +20,7 @@ public class SortNumbersWithFunction {
         String firstOutput = mutator.apply(evenNumbers.stream());
         System.out.println(firstOutput);
 
-        String sorted=mutator.apply(evenNumbers.stream().sorted());
+        String sorted = mutator.apply(evenNumbers.stream().sorted());
         System.out.println(sorted);
 
 
