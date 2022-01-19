@@ -12,9 +12,9 @@ public class ListPredicates {
         int endNumber = Integer.parseInt(scanner.nextLine());
         List<Integer> numbersForDivision = Arrays.stream(scanner.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
 
-        BiFunction<List<Integer>, Integer, Boolean> isDivisible=((list,number)->{
-            for (int numberInList:list) {
-                if (number%numberInList!=0){
+        BiFunction<List<Integer>, Integer, Boolean> isDivisible = ((list, number) -> {
+            for (int numberInList : list) {
+                if (number % numberInList != 0) {
                     return false;
                 }
             }
@@ -22,8 +22,8 @@ public class ListPredicates {
         });
 
         for (int i = 1; i <= endNumber; i++) {
-            if (isDivisible.apply(numbersForDivision,i)){
-                System.out.print(i+" ");
+            if (isDivisible.apply(numbersForDivision, i)) {
+                System.out.print(i + " ");
             }
         }
     }
