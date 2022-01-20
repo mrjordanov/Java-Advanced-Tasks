@@ -7,7 +7,7 @@ public class BankAccount {
     private int id;
     private double balance;
 
-    public BankAccount() {
+    public  BankAccount() {
         this.id = accountCount;
         accountCount++;
     }
@@ -24,10 +24,8 @@ public class BankAccount {
         this.balance += amount;
     }
 
-
     public int getId(){
         return id;
     }
-
 
 }

@@ -23,7 +23,6 @@ public class Main {
             else if (tokens[0].equals("Deposit")) {
                 int id = Integer.parseInt(tokens[1]);
                 int amount = Integer.parseInt(tokens[2]);
-
                 if (!bankAccounts.containsKey(id)) {
                     output = "Account does not exist";
                 } else {

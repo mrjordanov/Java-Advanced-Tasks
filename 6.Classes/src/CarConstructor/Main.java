@@ -1,8 +1,6 @@
 package CarConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +9,6 @@ public class Main {
         int n = Integer.parseInt(scanner.nextLine());
 
         List<Car> cars = new ArrayList<>();
-
         for (int i = 0; i < n; i++) {
             String[] info = scanner.nextLine().split(" ");
             Car car;
@@ -24,8 +21,8 @@ public class Main {
                 int power = Integer.parseInt(info[2]);
                 car = new Car(brand, model, power);
             }
-
             cars.add(car);
+
         }
 
         for (Car car : cars) {
