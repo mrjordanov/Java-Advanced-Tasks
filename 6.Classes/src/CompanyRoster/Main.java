@@ -1,7 +1,6 @@
 package CompanyRoster;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -69,7 +68,6 @@ public class Main {
             }
         }
         System.out.println("Highest Average Salary: " + last);
-
 
         List<Employee> sorted = peoples.stream().sorted((s1, s2) -> Double.compare(s2.getSalary(), s1.getSalary())).toList();
         for (Employee emp : sorted) {
