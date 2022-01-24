@@ -1,8 +1,6 @@
 package CarSalesMan;
 
 
-import java.awt.desktop.AboutEvent;
-
 public class Car {
     private String model;
     private Engine engine;

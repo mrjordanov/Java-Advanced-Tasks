@@ -14,8 +14,8 @@ public class Main {
         while (!input.equals("End")) {
             String[] parameters = input.split("\\s+");
             String name = parameters[0];
-            if (!personData.containsKey(name)){
-                personData.put(name,new Person());
+            if (!personData.containsKey(name)) {
+                personData.put(name, new Person());
             }
 
             String enteredData = parameters[1];
