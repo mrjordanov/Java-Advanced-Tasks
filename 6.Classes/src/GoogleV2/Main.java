@@ -17,6 +17,7 @@ public class Main {
             if (!personData.containsKey(name)){
                 personData.put(name,new Person());
             }
+
             String enteredData = parameters[1];
             if (enteredData.equals("company")) {
                 String companyName = parameters[2];
