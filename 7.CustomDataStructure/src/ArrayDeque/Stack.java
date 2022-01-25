@@ -59,10 +59,10 @@ public class Stack {
     }
 
     public void forEach(Consumer<Integer> consumer) {
-        Node curr=this.top;
+        Node curr = this.top;
         while (curr != null) {
             consumer.accept(curr.element);
-            curr=curr.prev;
+            curr = curr.prev;
         }
     }
 
