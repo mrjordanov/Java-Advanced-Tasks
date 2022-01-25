@@ -57,7 +57,7 @@ public class SmartArray {
 
     private int[] shrink() {
         int reduceFactor = 2;
-        
+
         if (this.elements.length / reduceFactor >= INITIAL_CAPACITY) {
             int[] newElements = new int[this.elements.length / reduceFactor];
             for (int i = 0; i < this.size; i++) {
