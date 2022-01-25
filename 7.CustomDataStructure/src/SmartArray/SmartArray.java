@@ -1,3 +1,5 @@
+package SmartArray;
+
 import java.util.function.Consumer;
 
 public class SmartArray {
@@ -46,7 +48,7 @@ public class SmartArray {
         this.elements[this.size - 1] = 0;
         this.size--;
 
-        if (this.size <= this.elements.length / 4 || this.size <= INITIAL_CAPACITY) {
+        if (this.size <= this.elements.length / 4) {
             this.elements = shrink();
         }
 
@@ -54,13 +56,17 @@ public class SmartArray {
     }
 
     private int[] shrink() {
-        int[] newElements = new int[this.elements.length / 2];
-
-        for (int i = 0; i < this.size; i++) {
-            newElements[i] = this.elements[i];
+        int reduceFactor = 2;
+        
+        if (this.elements.length / reduceFactor >= INITIAL_CAPACITY) {
+            int[] newElements = new int[this.elements.length / reduceFactor];
+            for (int i = 0; i < this.size; i++) {
+                newElements[i] = this.elements[i];
+            }
+            return newElements;
         }
 
-        return newElements;
+        return this.elements;
     }
 
     private void ensureIndex(int index) {
@@ -100,6 +106,5 @@ public class SmartArray {
             consumer.accept(this.elements[i]);
         }
     }
-
 
 }
