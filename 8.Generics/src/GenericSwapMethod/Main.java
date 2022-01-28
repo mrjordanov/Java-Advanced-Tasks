@@ -1,4 +1,4 @@
-package GenericBox;
+package GenericSwapMethod;
 
 import java.util.Scanner;
 
@@ -9,9 +9,14 @@ public class Main {
 
         Box<Integer> box = new Box<>();
         for (int i = 0; i < n; i++) {
-            box.addElement(Integer.parseInt(scanner.nextLine()));
+            box.add(Integer.parseInt(scanner.nextLine()));
         }
 
+        int firstIndex = scanner.nextInt();
+        int secondIndex = scanner.nextInt();
+        box.swapElements(firstIndex, secondIndex);
+
         System.out.print(box);
+
     }
 }
