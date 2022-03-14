@@ -2,7 +2,7 @@ package singlyLinkedList;
 
 import java.util.Scanner;
 
-public class FinderForElement {
+public class FinderForEnteredElement {
 
     public static void findTheValueOfEnteredElement(Scanner scanner, SinglyLinkedList list) {
 

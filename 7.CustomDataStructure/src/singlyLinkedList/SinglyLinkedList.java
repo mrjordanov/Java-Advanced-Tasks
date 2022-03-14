@@ -36,7 +36,7 @@ public class SinglyLinkedList {
 
     public int getTheValueOfTheUserEnteredElement(int elementNumber, SinglyLinkedList list) {
 
-        ValidationForEnteredElement.validatedElement(elementNumber, list);
+        ValidatorForEnteredElement.validatedElement(elementNumber, list);
 
         Node node = this.head;
 

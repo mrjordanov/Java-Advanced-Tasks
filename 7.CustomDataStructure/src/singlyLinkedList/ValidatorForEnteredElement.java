@@ -1,7 +1,7 @@
 package singlyLinkedList;
 
 
-public class ValidationForEnteredElement {
+public class ValidatorForEnteredElement {
 
     public static void validatedElement(int element, SinglyLinkedList list) {
 

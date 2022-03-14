@@ -3,7 +3,7 @@ package singlyLinkedList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class InsertElementsInTheList {
+public class AdderForTheList {
 
     public static void insertElementsInList(Scanner scanner, SinglyLinkedList list) {
 

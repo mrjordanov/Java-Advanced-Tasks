@@ -3,8 +3,8 @@ package singlyLinkedList;
 
 import java.util.Scanner;
 
-import static singlyLinkedList.FinderForElement.findTheValueOfEnteredElement;
-import static singlyLinkedList.InsertElementsInTheList.insertElementsInList;
+import static singlyLinkedList.FinderForEnteredElement.findTheValueOfEnteredElement;
+import static singlyLinkedList.AdderForTheList.insertElementsInList;
 
 public class Engine {
     public static void main(String[] args) {
