@@ -12,9 +12,9 @@ public class ValidationForEnteredElement {
             throw new IllegalStateException("The entered number (" + element + ") of element doesn't exist," +
                     " because the data base is empty!\n" + message + ":");
         }
-        if (element > list.getSize()) {
+        if (element >= list.getSize()) {
             String messageOutput = "The number of elements in the data base are " + list.getSize() + ".";
-            throw new IllegalArgumentException(messageOutput + "\n" + message + " between [0," + list.getSize() + "] : ");
+            throw new IllegalArgumentException(messageOutput + "\n" + message + " between [0," + (list.getSize() - 1) + "] : ");
         }
 
     }

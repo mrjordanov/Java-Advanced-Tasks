@@ -34,23 +34,23 @@ public class SinglyLinkedList {
         size++;
     }
 
-    public int getTheValueOfTheUserEnteredElement(int element, SinglyLinkedList list) {
+    public int getTheValueOfTheUserEnteredElement(int elementNumber, SinglyLinkedList list) {
 
-        ValidationForEnteredElement.validatedElement(element, list);
+        ValidationForEnteredElement.validatedElement(elementNumber, list);
 
         Node current = this.head;
 
         int desiredElementValue = 0;
         int curElement = 1;
 
-        if (element == this.size) {
+        if (elementNumber == this.size) {
             return this.tail.getElement();
         } else {
-            element = this.size - element;
+            elementNumber = this.size - elementNumber;
         }
 
         while (current != null) {
-            if (curElement == element) {
+            if (curElement == elementNumber) {
                 desiredElementValue = current.getElement();
                 break;
             }
