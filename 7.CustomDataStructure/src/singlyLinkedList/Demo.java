@@ -14,9 +14,9 @@ public class Demo {
 
         while (true) {
 
-            int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
             try {
+                int[] numbers = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
                 for (int number : numbers) {
                     singlyLinkedList.addElement(number);
@@ -24,7 +24,7 @@ public class Demo {
                 break;
 
             } catch (NumberFormatException exception) {
-                System.out.println("The entered numbers must be Integer values!\nPlease enter new values:");
+                System.out.print("The entered numbers must be Integer values!\nPlease enter new values: ");
             }
 
         }
@@ -32,6 +32,7 @@ public class Demo {
         System.out.print("Please enter a number for desired element: ");
 
         while (true) {
+
             try {
                 int desiredElement = Integer.parseInt(scanner.nextLine());
                 int value = singlyLinkedList.getTheValueOfTheUserEnteredElement(desiredElement, singlyLinkedList);
@@ -39,12 +40,13 @@ public class Demo {
                 break;
 
             } catch (NumberFormatException exception) {
-                System.out.println("The entered value of desired element must be an Integer number.");
-            } catch (IllegalArgumentException exception) {
-                System.out.println(exception.getMessage());
+                System.out.print("The entered value of desired element must be an Integer number.\n" +
+                        "Please enter a new number: ");
+            } catch (IllegalArgumentException | IllegalStateException exception) {
+                System.out.print(exception.getMessage());
             }
-        }
 
+        }
 
     }
 }

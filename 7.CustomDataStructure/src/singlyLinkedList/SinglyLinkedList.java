@@ -2,7 +2,7 @@ package singlyLinkedList;
 
 public class SinglyLinkedList {
 
-    private class Node {
+    private static class Node {
         int element;
         private Node next;
 
@@ -11,19 +11,20 @@ public class SinglyLinkedList {
             this.next = null;
         }
 
-        public int getElement() {
+        private int getElement() {
             return element;
         }
+
     }
 
     private Node head;
     private Node tail;
     private int size;
 
-
     public void addElement(int number) {
 
         Node newNode = new Node(number);
+
         if (this.head == null) {
             this.head = this.tail = newNode;
         } else {
@@ -34,6 +35,7 @@ public class SinglyLinkedList {
     }
 
     public int getTheValueOfTheUserEnteredElement(int element, SinglyLinkedList list) {
+
         ValidationForEnteredElement.validatedElement(element, list);
 
         Node current = this.head;
