@@ -14,11 +14,8 @@ public class InsertElementsInTheList {
             try {
                 String input = scanner.nextLine();
                 isInputNullOrEmpty(input);
-                int[] numbers = Arrays.stream(input.split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
-                for (int number : numbers) {
-                    list.addElement(number);
-                }
+                Arrays.stream(input.split("\\s+")).mapToInt(Integer::parseInt).forEach(list::addElement);
                 break;
 
             } catch (NumberFormatException exception) {
