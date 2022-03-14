@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FinderForElement {
 
-    public static void findTheValueOfEnteredElement(Scanner scanner, SinglyLinkedList list){
+    public static void findTheValueOfEnteredElement(Scanner scanner, SinglyLinkedList list) {
 
         System.out.print("Please enter a number for desired element: ");
 

@@ -29,19 +29,19 @@ public class SinglyLinkedList {
             this.head = this.tail = newNode;
         } else {
             this.tail.next = newNode;
-            tail = newNode;
+            this.tail = newNode;
         }
-        size++;
+        this.size++;
     }
 
     public int getTheValueOfTheUserEnteredElement(int elementNumber, SinglyLinkedList list) {
 
         ValidationForEnteredElement.validatedElement(elementNumber, list);
 
-        Node current = this.head;
+        Node node = this.head;
 
         int desiredElementValue = 0;
-        int curElement = 1;
+        int currentElement = 1;
 
         if (elementNumber == this.size) {
             return this.tail.getElement();
@@ -49,13 +49,13 @@ public class SinglyLinkedList {
             elementNumber = this.size - elementNumber;
         }
 
-        while (current != null) {
-            if (curElement == elementNumber) {
-                desiredElementValue = current.getElement();
+        while (node != null) {
+            if (currentElement == elementNumber) {
+                desiredElementValue = node.getElement();
                 break;
             }
-            curElement++;
-            current = current.next;
+            currentElement++;
+            node = node.next;
         }
 
         return desiredElementValue;
