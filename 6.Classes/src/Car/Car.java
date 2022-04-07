@@ -1,6 +1,6 @@
 package Car;
 
-public class Car {
+public class Car implements Cloneable {
     private String brand;
     private String model;
     private int horsePower;
@@ -12,15 +12,15 @@ public class Car {
     }
 
     public Car(String brand, String model) {
-        this(brand,model,0);
-      //  this.brand = brand;
-       // this.model = model;
+        this(brand, model, 0);
+        //  this.brand = brand;
+        // this.model = model;
     }
 
     public Car(String brand, int horsePower) {
-        this(brand,null,horsePower);
-      //  this.brand = brand;
-       // this.horsePower = horsePower;
+        this(brand, null, horsePower);
+        //  this.brand = brand;
+        // this.horsePower = horsePower;
     }
 
     public String getBrand() {
@@ -43,6 +43,9 @@ public class Car {
     public String toString() {
         return String.format("The car is: %s %s - %d HP.", this.getBrand(), this.getModel(), this.getHorsePower());
     }
+
+
+
 
 
 }

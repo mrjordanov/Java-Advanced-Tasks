@@ -14,6 +14,7 @@ public class Main {
             int power = Integer.parseInt(info[2]);
 
             Car car = new Car(brand, model, power);
+            System.out.println(car.getClass());
             String s = car.toString();
             System.out.println(s);
         }

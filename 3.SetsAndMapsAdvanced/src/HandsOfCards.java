@@ -30,7 +30,7 @@ public class HandsOfCards {
         Map<Character, Integer> pointsMap = getCardValue();
         int sum = 0;
         for (String card : value) {
-            int points=0;
+            int points;
             if (card.contains("10")) {
                 char type = card.charAt(2);
                 points=10*pointsMap.get(type);
